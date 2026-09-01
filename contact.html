@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Pickup — Mike's Slice</title>
+<meta name="description" content="Place a pickup order with Mike's Slice, Grand Junction's wood-fired pizza truck.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 92 L15 22 Q50 4 85 22 Z' fill='%238fd0ef' stroke='%23123c5c' stroke-width='6'/%3E%3Ccircle cx='42' cy='45' r='6' fill='%23123c5c'/%3E%3Ccircle cx='60' cy='55' r='6' fill='%23123c5c'/%3E%3Ccircle cx='48' cy='68' r='6' fill='%23123c5c'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Caveat:wght@500;600;700&family=Nunito+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 100 100" role="img" aria-hidden="true">
+        <path class="pizza-body" d="M50 92 L15 22 Q50 4 85 22 Z"/>
+        <path class="pizza-crust-line" d="M15 22 Q50 4 85 22"/>
+        <circle class="pizza-dot" cx="42" cy="45" r="5"/>
+        <circle class="pizza-dot" cx="60" cy="55" r="5"/>
+        <circle class="pizza-dot" cx="48" cy="68" r="5"/>
+      </svg>
+      <span class="brand-text">Mike's Slice<small>wood-fired &amp; on wheels</small></span>
+    </a>
+    <nav class="nav">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-menu">
+        Menu <span class="chevron" aria-hidden="true">▾</span>
+      </button>
+      <div class="menu-panel" id="site-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Mike</a>
+        <a href="contact.html" aria-current="page">Order Pickup</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" style="padding-bottom: 1.5rem;">
+    <div class="tape" style="top:1.8rem; left:8%; transform:rotate(-6deg);"></div>
+    <div class="wrap" style="display:block; max-width:760px;">
+      <span class="kicker doodle">skip the line</span>
+      <h1 style="font-size:clamp(2.2rem,5vw,3.4rem);">Order a Pickup Pizza</h1>
+      <p style="font-size:1.1rem;">Fill this out and we'll have your pie ready when you get here. Pick your pizza, tell us when you're swinging by, and we'll text you if anything needs a quick check.</p>
+    </div>
+  </section>
+
+  <section class="panel torn-top" style="padding-top:2.5rem;">
+    <div class="wrap contact-grid">
+
+      <div>
+        <!--
+          Netlify Forms setup note (for the live site, not this local demo):
+          Netlify auto-detects any <form> with a `data-netlify="true"` attribute
+          and a matching hidden "form-name" input at build/deploy time, then
+          emails submissions to whoever manages the site — no backend needed.
+          The honeypot field below (netlify-honeypot) is Netlify's built-in
+          spam trap. This only activates once the site is deployed on Netlify;
+          it does nothing when the file is opened locally or hosted elsewhere,
+          which is why script.js also shows an on-page confirmation message
+          for demo/testing purposes (data-demo-mode="true" below — remove that
+          attribute, and the JS block that reads it, once this goes live).
+        -->
+        <form
+          class="order-form"
+          id="order-form"
+          name="pickup-order"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          data-demo-mode="true"
+        >
+          <input type="hidden" name="form-name" value="pickup-order">
+          <p class="visually-hidden">
+            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+          </p>
+
+          <div class="form-row two-up">
+            <div>
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email <span class="hint">(optional — for a receipt)</span></label>
+            <input type="email" id="email" name="email">
+          </div>
+
+          <fieldset>
+            <legend>Pick your pizza(s)</legend>
+            <div class="checkbox-grid">
+              <label><input type="checkbox" name="pizza" value="Classic Pepperoni"> Classic Pepperoni — $12</label>
+              <label><input type="checkbox" name="pizza" value="Margherita Garden"> Margherita Garden — $11</label>
+              <label><input type="checkbox" name="pizza" value="BBQ Ranch Chicken"> BBQ Ranch Chicken — $13</label>
+              <label><input type="checkbox" name="pizza" value="Veggie Harvest"> Veggie Harvest — $12</label>
+              <label><input type="checkbox" name="pizza" value="Build-Your-Own"> Build-Your-Own — $10+</label>
+              <label><input type="checkbox" name="pizza" value="Palisade Peach & Prosciutto"> Palisade Peach &amp; Prosciutto — $14</label>
+            </div>
+          </fieldset>
+
+          <div class="form-row two-up">
+            <div>
+              <label for="pickup-date">Pickup date</label>
+              <input type="date" id="pickup-date" name="pickup-date" required>
+            </div>
+            <div>
+              <label for="pickup-time">Pickup time</label>
+              <input type="time" id="pickup-time" name="pickup-time" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="notes">Special instructions <span class="hint">(allergies, extra toppings, etc.)</span></label>
+            <textarea id="notes" name="notes"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Order</button>
+
+          <div class="form-confirm" id="form-confirm" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+
+      <aside>
+        <div class="info-card">
+          <h3>This week's stops</h3>
+          <ul class="hours-list">
+            <li><span>Thu &amp; Fri</span><span>4 – 8pm · North Ave</span></li>
+            <li><span>Saturday</span><span>10am – 2pm · Farmers Market</span></li>
+            <li><span>Sunday</span><span>4 – 7pm · Los Colonias Park</span></li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>Or just call it in</h3>
+          <p style="margin-bottom:.4rem;"><a href="tel:+19705550142">(970) 555-0142</a></p>
+          <p style="margin-bottom:0;"><a href="mailto:hello@mikesslice.example">hello@mikesslice.example</a></p>
+        </div>
+        <p class="demo-flag">This is a hypothetical demo page built to show what an order-ahead form could look like — no real orders are sent, and Mike's Slice isn't a real business.</p>
+      </aside>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <h4>Mike's Slice</h4>
+      <p style="max-width:32ch; color:rgba(255,255,255,.75);">Wood-fired pizza, hand-tossed daily, rolling around Grand Junction, CO.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Explore</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Mike</a>
+      <a href="contact.html">Order Pickup</a>
+    </div>
+    <div class="footer-links">
+      <h4>Say hi</h4>
+      <a href="tel:+19705550142">(970) 555-0142</a>
+      <a href="mailto:hello@mikesslice.example">hello@mikesslice.example</a>
+    </div>
+  </div>
+  <div class="footer-fine-print">
+    <div class="wrap">Hypothetical demo site — built by Western Slope Web Solutions. Not a real business.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mike's Slice — Wood-Fired Pizza Truck</title>
+<meta name="description" content="Mike's Slice is a wood-fired pizza truck serving hand-tossed pies around Grand Junction, Colorado. See today's menu and order pickup.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 92 L15 22 Q50 4 85 22 Z' fill='%238fd0ef' stroke='%23123c5c' stroke-width='6'/%3E%3Ccircle cx='42' cy='45' r='6' fill='%23123c5c'/%3E%3Ccircle cx='60' cy='55' r='6' fill='%23123c5c'/%3E%3Ccircle cx='48' cy='68' r='6' fill='%23123c5c'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Caveat:wght@500;600;700&family=Nunito+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 100 100" role="img" aria-hidden="true">
+        <path class="pizza-body" d="M50 92 L15 22 Q50 4 85 22 Z"/>
+        <path class="pizza-crust-line" d="M15 22 Q50 4 85 22"/>
+        <circle class="pizza-dot" cx="42" cy="45" r="5"/>
+        <circle class="pizza-dot" cx="60" cy="55" r="5"/>
+        <circle class="pizza-dot" cx="48" cy="68" r="5"/>
+      </svg>
+      <span class="brand-text">Mike's Slice<small>wood-fired &amp; on wheels</small></span>
+    </a>
+    <nav class="nav">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-menu">
+        Menu <span class="chevron" aria-hidden="true">▾</span>
+      </button>
+      <div class="menu-panel" id="site-menu">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About Mike</a>
+        <a href="contact.html">Order Pickup</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="tape" style="top:2.2rem; left:6%; transform:rotate(-8deg);"></div>
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="kicker doodle">Grand Junction's rolling pizza kitchen</span>
+        <h1>Hot pies.<br>Cold soda.<br>Parked nearby.</h1>
+        <p>Mike's Slice brings hand-tossed, wood-fired pizza to a corner near you — real dough, real ingredients, no shortcuts. Check today's pies below and swing by, or order ahead for pickup.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contact.html">Order Pickup</a>
+          <span class="hero-note doodle">→ usually parked on North Ave!</span>
+        </div>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 100 100" role="img" aria-hidden="true">
+          <path class="pizza-body" d="M50 92 L15 22 Q50 4 85 22 Z"/>
+          <path class="pizza-crust-line" d="M15 22 Q50 4 85 22"/>
+          <circle class="pizza-dot" cx="42" cy="45" r="6"/>
+          <circle class="pizza-dot" cx="60" cy="55" r="6"/>
+          <circle class="pizza-dot" cx="48" cy="68" r="6"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel torn-top">
+    <div class="wrap">
+      <div class="section-heading">
+        <span class="doodle">fresh out of the oven</span>
+        <h2>Today's Pies</h2>
+      </div>
+
+      <div class="menu-grid">
+
+        <article class="menu-card">
+          <div class="swatch" style="background: var(--blue-pale);">
+            <svg viewBox="0 0 100 100" aria-hidden="true"><path class="pizza-body" d="M50 92 L15 22 Q50 4 85 22 Z"/><circle class="pizza-dot" cx="42" cy="45" r="5"/><circle class="pizza-dot" cx="60" cy="55" r="5"/><circle class="pizza-dot" cx="48" cy="68" r="5"/></svg>
+          </div>
+          <h3>Classic Pepperoni <span class="price">$12</span></h3>
+          <p>House red sauce, mozzarella, and a generous helping of pepperoni. The one everyone orders first.</p>
+        </article>
+
+        <article class="menu-card">
+          <div class="swatch" style="background: var(--blue-pale);">
+            <svg viewBox="0 0 100 100" aria-hidden="true"><path class="pizza-body" d="M50 92 L15 22 Q50 4 85 22 Z"/></svg>
+          </div>
+          <h3>Margherita Garden <span class="price">$11</span></h3>
+          <p>San Marzano tomatoes, fresh mozzarella, basil, and a drizzle of olive oil. Simple, done right.</p>
+        </article>
+
+        <article class="menu-card">
+          <div class="swatch" style="background: var(--blue-pale);">
+            <svg viewBox="0 0 100 100" aria-hidden="true"><path class="pizza-body" d="M50 92 L15 22 Q50 4 85 22 Z"/><circle class="pizza-dot" cx="50" cy="50" r="7"/></svg>
+          </div>
+          <h3>BBQ Ranch Chicken <span class="price">$13</span></h3>
+          <p>Smoky BBQ base, grilled chicken, red onion, cilantro, and a ranch drizzle to finish.</p>
+        </article>
+
+        <article class="menu-card">
+          <div class="swatch" style="background: var(--blue-pale);">
+            <svg viewBox="0 0 100 100" aria-hidden="true"><path class="pizza-body" d="M50 92 L15 22 Q50 4 85 22 Z"/><circle class="pizza-dot" cx="38" cy="40" r="4"/><circle class="pizza-dot" cx="58" cy="42" r="4"/><circle class="pizza-dot" cx="46" cy="60" r="4"/><circle class="pizza-dot" cx="62" cy="65" r="4"/></svg>
+          </div>
+          <h3>Veggie Harvest <span class="price">$12</span></h3>
+          <p>Bell pepper, red onion, mushroom, olive, and spinach on a garlic-herb base.</p>
+        </article>
+
+        <article class="menu-card">
+          <div class="swatch" style="background: var(--blue-pale);">
+            <svg viewBox="0 0 100 100" aria-hidden="true"><path class="pizza-body" d="M50 92 L15 22 Q50 4 85 22 Z"/><circle class="pizza-dot" cx="50" cy="48" r="9"/></svg>
+          </div>
+          <h3>Build-Your-Own <span class="price">$10+</span></h3>
+          <p>Start with a classic red or garlic-herb base, then pick your toppings. $1 per topping.</p>
+        </article>
+
+        <article class="menu-card">
+          <div class="swatch" style="background: var(--blue-pale);">
+            <svg viewBox="0 0 100 100" aria-hidden="true"><path class="pizza-body" d="M50 92 L15 22 Q50 4 85 22 Z"/><circle class="pizza-dot" cx="45" cy="50" r="6"/><circle class="pizza-dot" cx="62" cy="58" r="6"/></svg>
+          </div>
+          <h3>Palisade Peach &amp; Prosciutto <span class="price">$14</span></h3>
+          <p>Seasonal — local Palisade peaches, prosciutto, mozzarella, and a honey-balsamic finish.</p>
+        </article>
+
+      </div>
+
+      <p class="menu-note doodle">psst — the peach one sells out fast in late summer!</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap find-truck">
+      <div>
+        <span class="doodle" style="font-size:1.3rem;">where to find us</span>
+        <h2>We move around — order ahead so you don't miss us.</h2>
+        <p>Mike's Slice doesn't sit still. Follow along for this week's stops, or skip the wait entirely and place a pickup order before you head over.</p>
+        <a class="btn btn-primary" href="contact.html">Order Pickup</a>
+      </div>
+      <div class="card">
+        <h3>This week, roughly:</h3>
+        <ul>
+          <li>Thu &amp; Fri evenings — North Avenue, near Mesa Mall</li>
+          <li>Saturday midday — Downtown Grand Junction farmers market</li>
+          <li>Sunday evening — Los Colonias Park</li>
+        </ul>
+        <p class="hint" style="margin-top:.8rem;">Locations are a placeholder for this demo — the live site would pull this from wherever Mike updates it weekly.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <h4>Mike's Slice</h4>
+      <p style="max-width:32ch; color:rgba(255,255,255,.75);">Wood-fired pizza, hand-tossed daily, rolling around Grand Junction, CO.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Explore</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Mike</a>
+      <a href="contact.html">Order Pickup</a>
+    </div>
+    <div class="footer-links">
+      <h4>Say hi</h4>
+      <a href="tel:+19705550142">(970) 555-0142</a>
+      <a href="mailto:hello@mikesslice.example">hello@mikesslice.example</a>
+    </div>
+  </div>
+  <div class="footer-fine-print">
+    <div class="wrap">Hypothetical demo site — built by Western Slope Web Solutions. Not a real business.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
